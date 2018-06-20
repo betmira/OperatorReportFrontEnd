@@ -1,0 +1,27 @@
+<!--<span class="select-pound-rating">-->
+<!--<input type="number"  min="1" max="5" class=" pound-rating-input " [placeholder]="placeholder"   [(ngModel)]="ratingValue"  />-->
+
+<!--</span>-->
+
+
+<!--<div class="dropdown">-->
+  <!--<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" (click)="select($event.target.value)"  >{{placeholder}}-->
+    <!--<span class="caret"></span></button>-->
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   {{dropDownTitle}}
+  </button>
+  <div class="dropdown-menu ">
+    <button   class="dropdown-item" type="button"  (click)="select(null)">ALL</button>
+    <button  *ngFor="let option of options" class="dropdown-item" type="button"  (click)="select(option)">{{option.name}}</button>
+  </div>
+  <!--<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">-->
+
+    <!--<li  *ngFor="let option of options" role="menuitem">-->
+      <!--<span value="option.id">option.name </span>-->
+    <!--</li>-->
+
+  <!--</ul>-->
+</div>
+
+

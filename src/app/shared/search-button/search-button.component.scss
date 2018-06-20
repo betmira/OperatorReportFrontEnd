@@ -1,0 +1,22 @@
+.search-btn {
+
+
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  font-size: .76rem;
+  border-radius: 5px;
+  border: 0;
+  font-weight: 600;
+  padding: 0 18px;
+  height: 38px;
+  margin-left: 5px;
+  color: #fdfdfd;
+  background: rgba(107,161,243,1);
+  background: -moz-linear-gradient(top, rgba(107,161,243,1) 0%, rgba(31,118,240,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(107,161,243,1)), color-stop(100%, rgba(31,118,240,1)));
+  background: -webkit-linear-gradient(top, rgba(107,161,243,1) 0%, rgba(31,118,240,1) 100%);
+  background: -o-linear-gradient(top, rgba(107,161,243,1) 0%, rgba(31,118,240,1) 100%);
+  background: -ms-linear-gradient(top, rgba(107,161,243,1) 0%, rgba(31,118,240,1) 100%);
+  background: linear-gradient(to bottom, rgba(107,161,243,1) 0%, rgba(31,118,240,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ba1f3', endColorstr='#1f76f0', GradientType=0 );
+}

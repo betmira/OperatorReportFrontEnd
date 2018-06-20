@@ -1,0 +1,18 @@
+<div class="container-fluid" >
+  <div class="container-fluid" >
+<app-operator-report-filter (filterOptions)="resultFilters($event)" ></app-operator-report-filter>
+  </div>
+<ag-grid-angular style=" height:calc(100vh - 175px);" class="ag-theme-fresh"
+                 [rowData]="rowData"
+                 [enableFilter]="true"
+                 [enableSorting]="true"
+                 [columnDefs]="columnDefs"
+                 [enableColResize]="true"
+                 (gridReady)="onGridReady($event)"
+                  >
+</ag-grid-angular>
+  <button type="button" name="button" class="search-btn " (click)="exportExcel()">Export To Excel</button>
+</div>
+
+
+

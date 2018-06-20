@@ -1,0 +1,30 @@
+<div *ngIf="reportData"  class="row">
+  <div class="col-sm-1">
+    <app-dropdown [dropDownTitle]="devicesButtonTitle" [options]="optionDevices" (selectedOption)="selectedDevices($event)" class="inline"></app-dropdown>
+  </div>
+  <div class="col-sm-1">
+    <app-dropdown [dropDownTitle]="webButtonTitle" [options]="optionWebs" (selectedOption)="selectedWebs($event)" class="inline" ></app-dropdown>
+  </div>
+  <div class="col-sm-1">
+
+    <div>
+      <input type="radio" value="list" name="dateOption" [(ngModel)] = "dateOptionComponent" /> Date List
+    </div>
+    <div>
+      <input type="radio" value="calendar" name="dateOption" [(ngModel)] = "dateOptionComponent" /> Date Calendar
+    </div>
+  </div>
+
+  <div class="col-sm-1" *ngIf="dateOptionComponent =='list'">
+
+    <app-dropdown  [dropDownTitle]="dateButtonTitle" [options]="optionDate" (selectedOption)="selectedDate($event)" class="inline" ></app-dropdown>
+  </div>
+  <div class="col-sm-5" *ngIf="dateOptionComponent !='list'">
+    <app-date-picker-start-end (selectedDate)="selectedDateCalendar($event)" ></app-date-picker-start-end>
+  </div>
+  <div class="col-sm-1">
+    <app-search-button (searcheClicked)="searcheClicked()"></app-search-button>
+  </div>
+</div>
+
+
